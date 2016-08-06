@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  restaurant_id: 
+  dish: MyString
+  review: MyText
+  spice_level: 1
+
+two:
+  user_id: 
+  restaurant_id: 
+  dish: MyString
+  review: MyText
+  spice_level: 1
