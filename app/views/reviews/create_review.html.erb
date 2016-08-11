@@ -1,1 +1,25 @@
 <h1>Create Review</h1>
+
+<div class ="col-sm-4">	
+	<form role="form" action ="/review" method ="post">
+
+	  <input name ="authenticity_token" value ="<%= form_authenticity_token%>" type="hidden">
+
+	  <div class="form-group">
+	    <label for="restaruant">Restaurant:</label>
+	    <input type="restaruant" class="form-control" id="restaruant" name="restaruant">
+	  </div>
+
+	  <div class="form-group">
+	    <label for="dish">Dish:</label>
+	    <input type="dish" class="form-control" id="dish" name="dish">
+	  </div>
+
+	  <div class="form-group">
+	    <label for="spice_level">Spice Level:</label>
+	    <input type="spice_level" class="form-control" id="spice_level" name="spice_level">
+	  </div>
+
+	  <button type="submit" class="btn btn-default">Submit</button>
+	</form>
+</div>
