@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get '/login' => 'users#login'
   get '/profile' => 'users#show'
+  get '/review' => 'reviews#create_review'
 
   post '/users' => 'users#create'
 
