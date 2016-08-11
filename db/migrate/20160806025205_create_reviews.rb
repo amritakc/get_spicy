@@ -4,7 +4,7 @@ class CreateReviews < ActiveRecord::Migration
       t.references :user, index: true, foreign_key: true
       t.references :restaurant, index: true, foreign_key: true
       t.string :dish
-      t.text :review
+      t.text :cust_review
       t.integer :spice_level
 
       t.timestamps null: false
