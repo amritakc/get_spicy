@@ -1,6 +1,7 @@
 <h1>Login</h1>
 
-	<form role="form" class = "col-xs-2">
+	<form role="form" class = "col-xs-2" action = "/sessions" method = "post">
+	  <input name ="authenticity_token" value ="<%= form_authenticity_token%>" type="hidden">
 	  <div class="form-group">
 	    <label for="Username">Username:</label>
 	    <input type="username" class="form-control" id="username">
@@ -14,22 +15,29 @@
 
 <h1>Register</h1>
 
-	<form role="form" class = "col-xs-2">
+	<form role="form" class = "col-xs-2" action = "/users" method = "post">
+	  <input name ="authenticity_token" value ="<%= form_authenticity_token%>" type="hidden">
 	  <div class="form-group">
 	    <label for="name">Name:</label>
-	    <input type="name" class="form-control" id="name">
+	    <input type="name" class="form-control" id="name" name = "user[name]">
 	  </div>
 	  <div class="form-group">
-	    <label for="username">Email address:</label>
-	    <input type="username" class="form-control" id="username">
+	    <label for="alias">Username:</label>
+	    <input type="alias" class="form-control" id="alias" name = "user[alias]">
 	  </div>
 	  <div class="form-group">
 	    <label for="password">Password:</label>
-	    <input type="em" class="form-control" id="email">
+	    <input type="password" class="form-control" id="password" name = "user[password]">
 	  </div>
 	  <div class="form-group">
-	    <label for="pwd">Password Confirmation:</label>
-	    <input type="password" class="form-control" id="pwd">
+	    <label for="password_confirmation">Password Confirmation:</label>
+	    <input type="password" class="form-control" id="password_confirmation" name = "user[password_confirmation]">
 	  </div>
 	  <button type="submit" class="btn btn-default">Submit</button>
 	</form>
+
+	<%if flash[:mistakes]%>
+		<%flash[:mistakes].each do |mes|%>
+			<%=mes%>
+		<%end%>
+	<%end%>
