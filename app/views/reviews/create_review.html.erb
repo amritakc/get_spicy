@@ -2,49 +2,48 @@
 
 <div class ="col-sm-4">	
 	<form role="form" action ="/review" method ="post">
+		<input name ="authenticity_token" value ="<%= form_authenticity_token%>" type="hidden">
 
-	  <input name ="authenticity_token" value ="<%= form_authenticity_token%>" type="hidden">
+		<div class="form-group">
+			<label for="restaurant">Restaurant:</label>
+			<input type="restaurant" class="form-control" id="restaurant" name="restaurant[rest_name]">
+		</div>
 
-	  <div class="form-group">
-	    <label for="restaurant">Restaurant:</label>
-	    <input type="restaurant" class="form-control" id="restaurant" name="restaurant[rest_name]">
-	  </div>
+		<div class="form-group">
+			<label for="address">Restaurant:</label>
+			<input type="address" class="form-control" id="address" name="restaurant[address]">
+		</div>
 
-	  <div class="form-group">
-	    <label for="address">Restaurant:</label>
-	    <input type="address" class="form-control" id="address" name="restaurant[address]">
-	  </div>
+		<div class="form-group">
+			<label for="state">Restaurant:</label>
+			<input type="state" class="form-control" id="state" name="restaurant[state]">
+		</div>
 
-	  <div class="form-group">
-	    <label for="state">Restaurant:</label>
-	    <input type="state" class="form-control" id="state" name="restaurant[state]">
-	  </div>
+		<div class="form-group">
+			<label for="zipcode">Restaurant:</label>
+			<input type="zipcode" class="form-control" id="zipcode" name="restaraunt[zip_code]">
+		</div>
 
-	  <div class="form-group">
-	    <label for="zipcode">Restaurant:</label>
-	    <input type="zipcode" class="form-control" id="zipcode" name="restaraunt[zip_code]">
-	  </div>
+		<div class="form-group">
+			<label for="food_type">Restaurant:</label>
+			<input type="food_type" class="form-control" id="food_type" name="restaraunt[food_type]">
+		</div>
 
-	  <div class="form-group">
-	    <label for="food_type">Restaurant:</label>
-	    <input type="food_type" class="form-control" id="food_type" name="restaraunt[food_type]">
-	  </div>
+		<div class="form-group">
+			<label for="dish">Dish:</label>
+			<input type="dish" class="form-control" id="dish" name="review[dish]">
+		</div>
 
-	  <div class="form-group">
-	    <label for="dish">Dish:</label>
-	    <input type="dish" class="form-control" id="dish" name="review[dish]">
-	  </div>
+		<div class="form-group">
+			<label for="spice_level">Spice Level:</label>
+			<input type="spice_level" class="form-control" id="spice_level" name="review[spice_level]">
+		</div>
 
-	  <div class="form-group">
-	    <label for="spice_level">Spice Level:</label>
-	    <input type="spice_level" class="form-control" id="spice_level" name="review[spice_level]">
-	  </div>
+		<div class="form-group">
+			<label for="cust_review">Review:</label>
+			<input type="cust_review" class="form-control" id="cust_review" name="review[cust_review]">
+		</div>
 
-	  <div class="form-group">
-	    <label for="cust_review">Review:</label>
-	    <input type="cust_review" class="form-control" id="cust_review" name="review[cust_review]">
-	  </div>
-
-	  <button type="submit" class="btn btn-default">Submit</button>
+		<button type="submit" class="btn btn-default">Submit</button>
 	</form>
 </div>

@@ -4,13 +4,14 @@ Rails.application.routes.draw do
 
   get '/login' => 'users#login'
   get '/profile' => 'users#show'
-  get '/review' => 'reviews#create_review'
-
   post '/users' => 'users#create'
 
+  get '/review' => 'reviews#create_review'
+  post '/review' => 'reviews#create'
+  
   post '/sessions' => 'sessions#create'
 
-  post '/review' => 'reviews#create'
+  
 
 
 end

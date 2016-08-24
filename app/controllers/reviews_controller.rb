@@ -16,6 +16,7 @@ class ReviewsController < ApplicationController
 	def review_params
 		params.require(:review).permit(:dish, :spice_level, :cust_review)
 	end
+	
 	def restaurant_params
 		params.require(:restaurant).permit(:rest_name, :address, :state, :zipcode, :food_type)
 	end
